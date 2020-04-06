@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>school</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md" >
+      
+    <a class="navbar-brand">
+    <span class="logo">Treble Education Center</span>
+    </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+     data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teach.html">Teacher</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Register</a>
+          </li>
+          </ul>
+          </div>
+          </nav>
+          <div class="banner-reg">
+            
+          </div>
+          <div class="container">
+            <div class="inner">
+                <form action="">
+                    <h3>Sign Up</h3>
+                    <div class="form-holder active">            
+                        <input type="text" placeholder="Full name" class="form-control">
+                    </div>
+                    <div class="form-holder">
+                        <input type="email"  placeholder="Email" class="form-control"> 
+                    </div>
+                    <div class="form-holder">
+                        <input type="number"  placeholder="Phone No" class="form-control"> 
+                    </div>
+                    
+                    <div class="form-holder">
+                        <input type="password" placeholder="Password" class="form-control" id="password" >
+                    </div>
+                    <div class="form-holder">
+                        <input type="password"  placeholder="Confirm password" class="form-control"
+                     id="confirm_password" onkeyup="confirmPassword()">
+                        <span id="right" style="color: green; font-size: 16px; display: none;">
+                             your passwords match</span>
+                        <span id="wrong" style="color: red; font-size: 16px; display: none;">
+                            your passwords do not match</span>
+                    </div>
+                    <div class="form-login">
+                        <button class="login-btn" onclick="checkPassword()">Submit</button>
+                    </div>
+                </form>
+                </div>
+              </div>  
+         
+              <script>
+                  // Declaring and assigning variable
+var password = document.getElementById('password');
+var confirm_password = document.getElementById('confirm_password');
+
+// conditional statement to verify two password
+function checkPassword(){
+  if (password.value == confirm_password.value) {
+     alert("Your password match: thanks for signing up");
+ }
+ else if(!(password.value == confirm_password.value)){
+     alert("Your paswords do not match:");
+ }
+ else{
+     alert("try again")
+ }
+}
+ function confirmPassword(){
+var passRight=document.getElementById('right');
+var passWrong=document.getElementById('wrong');
+
+if (password.value==confirm_password.value) {
+document.getElementById('right').style.display="block";
+document.getElementById('wrong').style.display="none";
+}
+
+else if(!(password.value==confirm_password.value)){
+document.getElementById('right').style.display="none";
+document.getElementById('wrong').style.display="block"
+}
+else {
+alert("error");
+}
+}
+
+              </script>
+</body>
+</html>

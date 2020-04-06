@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>school</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="main.js">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md" >
+      
+    <a class="navbar-brand">
+    <span class="logo">Treble Education Center</span>
+    </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+     data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Teacher</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          </ul>
+          </div>
+          </nav>
+          <button class="btn" onclick="calculateGrade()">
+              calculate
+          </button>
+          <script >
+          var grade = prompt("Enter student score:")
+          function calculateGrade(){
+                if(grade>=81){
+                    alert("your grade is :A")
+                }
+                else if(grade>=70){
+                    alert("your grade is: B")
+                }
+                else if(grade>=50){
+                alert("your grade is: C")
+               }
+               else if(grade<=49){
+                alert("your grade is: D")
+               }
+               else{
+                alert("Student did not take the exam")
+               }
+        }
+          </script>
+</body>
+</html>
