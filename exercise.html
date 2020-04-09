@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+ Exercise
+1.	Write the syntax for creating an Array.
+Solution: 
+var array_name = [item1, item2 ...];
+
+2.	var points =[];
+I prefer to use the above because it’s the standard and most used 
+Syntax for creating an array.
+3.	The Array indexes starts from 
+5. b Arrays
+6.	b Objects
+
+
+
+    <p id="demo"></p>
+
+    <script>
+        // Question 4
+        var colours =["Red","Blue","Green","Yellow"];
+        document.write(colours[0]);
+        document.write(colours[1]);
+        document.write(colours[2]);
+        document.write(colours[3]);
+
+
+        // Question 7
+         var language =["DART","PHP","JAVASCRIPT","PYTHON"];
+        
+        // Adding three more elements
+         language.push("JAVA","C++","REACT");
+        document.write(language);
+
+        // ACCESING LAST ELEMENT
+       var  last = language.pop();
+        document.write(last);
+
+    // REPLACE THE LAST ELEMENT WITH THE FIRST ELEMENT
+        var replace = language.splice(0,1,"DART");
+        document.write(language.join());
+        document.write(replace);
+
+            // TYPE OF ARRAY
+          var type =  Array.isArray(language);
+           document.write(type);
+
+
+        // LOOPING THROUGH THE ARRAY
+        var language, i, text;
+        langLen = language.length;
+        text = "<ul>";
+        for (i = 0; i < langLen; i++) {
+         text += "<li>" + language[i] + "</li>";
+        }
+        text += "</ul>";
+
+
+    document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
